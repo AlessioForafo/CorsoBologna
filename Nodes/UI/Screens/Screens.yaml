@@ -860,6 +860,14 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 60.0
+  - Name: Label3
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Label3"}
 - Name: Screen4
   Id: g=b8d9b105c5bf5c708435800d44a1d4fe
   Supertype: Screen
