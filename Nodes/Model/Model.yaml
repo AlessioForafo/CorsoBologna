@@ -1,0 +1,32 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: TempPLC
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.0
+  Children:
+  - Name: ns=0;EngineeringUnits
+    Type: EUInformationType
+    DataType: EUInformation
+    Children:
+    - Name: UnitId
+      Type: BaseVariableType
+      DataType: Int32
+      ReferenceType: HasProperty
+      Value: 5067595
+    - Name: DisplayName
+      Type: BaseVariableType
+      DataType: LocalizedText
+      ReferenceType: HasProperty
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Description
+      Type: BaseVariableType
+      DataType: LocalizedText
+      ReferenceType: HasProperty
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+- Name: Lunghezza
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+- File: MieVariabili/MieVariabili.yaml

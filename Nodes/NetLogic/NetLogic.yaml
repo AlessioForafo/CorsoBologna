@@ -1,0 +1,71 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: CreaVariabiliDesignTime
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: MetodoCreazioneVariabili
+- Name: PeriodicActionLogic
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Period
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:0.5000000"
+  - Name: Action
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=3;i=98
+      Direction: Forward
+    - Name: ObjectPointer
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../Commands/VariableCommands@NodeId"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Method
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Increment"
+    - Name: InputArguments
+      Type: BaseObjectType
+      Children:
+      - Name: VariableToModify
+        Type: BaseDataVariableType
+        DataType: VariablePointer
+        Description: {"NamespaceIndex":3,"TextId":"IncrementVariableToModifyDescription"}
+        Value: "/Objects/CorsoBologna/Model/MieVariabili/MiaVar0"
+      - Name: Delta
+        Type: BaseDataVariableType
+        DataType: Float
+        Description: {"NamespaceIndex":3,"TextId":"IncrementDeltaDescription"}
+        Value: 1.0
+      - Name: ArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Description: {"NamespaceIndex":3,"TextId":"IncrementArrayIndexDescription"}
+        ValueRank: ScalarOrOneDimension
+        Value: 0

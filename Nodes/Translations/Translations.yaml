@@ -1,0 +1,50 @@
+Name: Translations
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [2,3],
+    "Body": [
+     "","en-US","it-IT",
+     "ciao","hello","ciao"
+    ]
+   }
+- Name: ImportAndExportTranslations
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVPath
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: ""
+  - Class: Method
+    Name: ExportTranslations
+  - Class: Method
+    Name: ImportTranslations
+  - Name: CharacterSeparator
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: LocalizationDictionary
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"

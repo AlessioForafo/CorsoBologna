@@ -1,0 +1,115 @@
+Name: MieiWidget
+Type: FolderType
+Children:
+- Name: DisplayConUnitaMisura
+  Id: g=0fba0d045c22756d22ee9f2eb5f15537
+  Supertype: RowLayout
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 50.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 50.0
+  - Name: SpinBox1
+    Type: SpinBox
+    Children:
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 0.0
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../AnalogVariable1"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+        - Name: EUMode
+          Type: BaseVariableType
+          DataType: DynamicLinkEUMode
+          Value: 0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: Format
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "f2"
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../AnalogVariable1/EngineeringUnits/DisplayName"
+        Children:
+        - Name: EUMode
+          Type: BaseVariableType
+          DataType: DynamicLinkEUMode
+          Value: 0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+  - Name: AnalogVariable1
+    Type: AnalogItemType
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: EURange
+      Type: RangeType
+      DataType: Range
+      Children:
+      - Name: Low
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+      - Name: High
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+    - Name: EngineeringUnits
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Type: BaseVariableType
+        DataType: Int32
+        ReferenceType: HasProperty
+        Value: 4408652
+      - Name: DisplayName
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Description
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}

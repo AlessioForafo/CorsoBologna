@@ -1,0 +1,44 @@
+Name: MieVariabili
+Type: FolderType
+Children:
+- Name: MiaVar0
+  Id: g=f31c674f272c4315b63327f3eb4ad324
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 0
+- Name: MiaVar1
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 1
+- Name: MiaVar2
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 2
+- Name: MiaVar3
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 3
+- Name: MiaVar4
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 4
+- Name: MiaVar5
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 5
+- Name: MiaVar6
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 6
+- Name: MiaVar7
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 7
+- Name: MiaVar8
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 8
+- Name: MiaVar9
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 9
